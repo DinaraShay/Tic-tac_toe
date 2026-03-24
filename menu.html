@@ -41,9 +41,23 @@
     </main>
 
     <footer class="footer">
-        <button class="footer__btn footer__btn--yellow">NEW GAME (VS CPU)</button>
-        <button class="footer__btn footer__btn--green">NEW GAME (VS PLAYER)</button>
+        <a href="" class="footer__btn footer__btn--yellow">NEW GAME (VS CPU)</a>
+        <a href="" class="footer__btn footer__btn--green">NEW GAME (VS PLAYER)</a>
     </footer>
 </body>
+<script>
+const btns = document.querySelectorAll('.pick__option');
 
+btns.forEach(btn => {
+    btn.addEventListener('click', function() {
+        if (this.classList.contains('pick__option--active')) return;
+        
+        btns.forEach(btn => {
+            btn.classList.remove('pick__option--active');
+        });
+        
+        this.classList.add('pick__option--active');
+    });
+});
+</script>
 </html>
