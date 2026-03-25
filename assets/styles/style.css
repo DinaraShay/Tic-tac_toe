@@ -434,3 +434,27 @@ body {
     box-shadow: inset 0 -4px 0 0 #cc8b13;
     background: var(--light-yellow-hover); 
 }
+
+.board__cell-green path {
+    transition: var(--animation-btn);
+}
+
+.board__cell-green:hover path {
+    stroke: var(--light-blue);
+    stroke-width: 3px;
+    fill: none;
+}
+
+.board__cell-yellow path {
+    transition: var(--animation-btn);
+}
+
+.board__cell-yellow:hover path {
+    stroke: var(--light-yellow);
+    stroke-width: 3px;
+    fill: none;
+}
+
+.popup__title-silver {
+    color: var(--silver);
+}
